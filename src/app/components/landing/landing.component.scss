@@ -4,10 +4,9 @@
     align-items: center;
     padding: 4rem 6rem;
     gap: 4rem;
-    min-height: 90vh;
-
+    height: 100vh;
     background: linear-gradient(to bottom, #99D9F4 40%, #ffffff 85%);
-    color: white; // ✅ testo bianco di default
+    color: white;
 
     @media (max-width: 1024px) {
         flex-direction: column;
@@ -16,7 +15,7 @@
     }
 
 
-    
+
     .hero-content {
         flex: 1;
 
@@ -30,24 +29,34 @@
 
         .hero-title {
             font-size: 4rem;
-            font-weight: 800;
+            font-weight: 400;
             line-height: 1.2;
             color: white;
 
-            .highlight {
-                color: white;
-                text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+            strong {
+                font-weight: 800;
             }
         }
+
     }
 
     .hero-image {
         flex: 1;
         text-align: center;
+        display: flex;
+        align-items: flex-end;
 
         img {
-            max-width: 100%;
+            max-width: 120%;
+            width: 600px;
             height: auto;
+            transform: translateY(252px);
+            transition: transform 0.3s ease;
+
+            @media (max-width: 1024px) {
+                width: 90%;
+                transform: translateY(20px);
+            }
         }
     }
 }
