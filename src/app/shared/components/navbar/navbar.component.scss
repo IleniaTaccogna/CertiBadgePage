@@ -1,105 +1,71 @@
 @use '../../../_variables' as *;
 
 .custom-navbar {
-  padding: 1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: transparent;
+    padding: 1rem 0;
 
-  .container {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap; 
-  }
-
-
-  .logo-section {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    .logo-img {
-      height: 40px;
+    .navbar-container {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 
-    .brand-name {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 300;
-      color:$color-btn;
+
+    .logo-section {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .logo-img {
+            height: 7rem;
+            width: auto;
+            object-fit: contain;
+        }
+
+
+        .brand-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #2c2c51;
+        }
     }
-  }
 
+    .nav-links {
+        display: flex;
+        gap: 4rem;
 
-  .nav-links {
-    display: flex;
-    gap: 4rem;
-
-    a {
-        color:$color-btn;
-    //   color: rgb(255, 255, 255);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.2rem;
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.7rem;
+        }
     }
-  }
+}
 
-
-  .nav-buttons {
+.nav-buttons {
     display: flex;
     gap: 1rem;
 
     .rounded-btn {
-      background:$color-btn;
-      border: none;
-      border-radius: 2rem;
-      color: white;
-      font-weight: bold;
-      padding: 0.7rem;
-      font-size: 1.1rem;
-      width: 9rem;
-
-      &:hover {
-        background:$color-btn;
-      }
-    }
-  }
-
-  
-
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0 1rem;
-    gap: 1.5rem;
-    }
-
-    .logo-section {
-      width: 100%;
-      justify-content: space-between;
-    }
-
-    .nav-links {
-      flex-direction: column;
-      gap: 1rem;
-      width: 100%;
-      margin-top: 1rem;
-
-      a {
-          font-size: 1.2rem;
-      }
-    }
-
-    .nav-buttons {
-      flex-direction: column;
-      width: 100%;
-      gap: 0.5rem;
-
-      .rounded-btn {
-        width: 100%;
+        background: #2c2c51;
+        border: none;
+        border-radius: 2rem;
+        color: white;
+        font-weight: bold;
+        padding: 0.7rem;
         font-size: 1.1rem;
-        padding: 0.7rem;  
-      }
+        width: 9rem;
+
+        &:hover {
+            background: #1e1e3c;
+        }
     }
-  }
 }
