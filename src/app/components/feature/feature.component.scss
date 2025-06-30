@@ -1,0 +1,94 @@
+@use '../../variables' as *;
+
+//title page feature
+.title-features {
+  text-align: center;
+  font-size: 4rem;
+  color: #2b2b4f;
+  margin-bottom: 2rem;
+}
+
+//layout page feature\
+.badge-layout {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #eef6fb, #ffffff);
+}
+
+
+.left-panel,
+.center-panel,
+.right-panel {
+  flex: 1;
+  max-width: 350px;
+}
+
+// column left
+.option-list {
+  list-style-type: circle;
+  padding: 0;
+  font-size: 1.7rem ;
+}
+
+.option-list li {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: $text-secondary;
+}
+
+.option-list li.active {
+  background-color: white;
+  box-shadow: 0 0 8px rgba(7, 1, 1, 0.05);
+}
+
+// column center
+.badge-card{
+  border: 2px solid $text-secondary;
+  border-radius: 0.45rem;
+}
+
+.badge-card img {
+  display: flex;
+  margin: 0 auto;
+}
+
+.title-card{
+  color: $text-secondary;
+}
+
+
+// .badge-info p {
+//   margin: 0.3rem 0;
+//   font-size: 0.9rem;
+// }
+
+// .highlight {
+//   background: transparent;
+//   text-align: left;
+// }
+
+// .highlight h4 {
+//   font-size: 1.2rem;
+//   font-weight: bold;
+//   color: #2b2b4f;
+//   margin-bottom: 1rem;
+// }
+
+// .highlight p {
+//   color: #444;
+//   font-size: 0.95rem;
+//   margin-bottom: 1.5rem;
+// }
+
+// .cta {
+//   background-color: #2b2b4f;
+//   color: white;
+//   border: none;
+//   padding: 0.7rem 1.5rem;
+//   border-radius: 999px;
+//   font-weight: bold;
+//   cursor: pointer;
+// }
