@@ -4,7 +4,7 @@
     align-items: center;
     padding: 4rem 6rem;
     gap: 4rem;
-    min-height: 90vh;
+    min-height: 100vh;
     background: linear-gradient(to bottom, #99D9F4 40%, #ffffff 85%);
     color: white;
     flex-wrap: wrap;
@@ -13,6 +13,10 @@
         flex-direction: column;
         text-align: center;
         padding: 2rem;
+
+        .hero-content {
+            margin-top: 5rem; 
+        }
     }
 
     .hero-content {
@@ -57,7 +61,7 @@
             max-width: 120%;
             width: 600px;
             height: auto;
-            transform: translateY(201px);
+            transform: translateY(252px);
             transition: transform 0.3s ease;
 
             @media (max-width: 1024px) {

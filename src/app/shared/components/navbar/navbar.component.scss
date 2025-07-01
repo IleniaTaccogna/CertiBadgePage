@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 1020;
   background: transparent;
   padding: 1rem 0;
 
@@ -19,6 +19,8 @@
   }
 
   .logo-section {
+    position: relative;
+    z-index: 1021;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -38,6 +40,8 @@
     color: #2c2c51;
     font-size: 2.5rem;
     margin-left: auto;
+    position: relative;
+    z-index: 1021;
 
     i {
       pointer-events: none;
@@ -91,21 +95,21 @@
 
     .mobile-menu {
       display: none;
-      position: absolute;
-      top: 100%;
+      position: fixed; // copre tutta la viewport
+      top: 0;
       left: 0;
       width: 100%;
-      height: calc(100vh - 6rem);
-      background-color: rgba(255, 255, 255, 0.95);
+      height: 100vh; // altezza viewport
+      padding-top: 7rem; // spazio per navbar alta 7rem
+      background-color: white;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding: 2rem 1.5rem;
       gap: 1.5rem;
-      z-index: 999;
       overflow-y: auto;
       transform: translateY(-100%);
       transition: transform 0.3s ease-in-out;
+      z-index: 1010; // sotto navbar, sopra il resto
 
       &.open {
         display: flex;
