@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&display=swap');
+
+:host {
+font-family: 'Urbanist', sans-serif;
+}
+.about-intro {
+    padding: 6rem 3rem;
+    background-color: #ffffff;
+
+    .benefits-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+        padding: 0 2rem;
+        position: relative;
+
+        .benefit {
+            position: relative;
+            padding-left: 2.2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c2c51;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 19px;
+                height: 19px;
+                border-radius: 50%;
+                border: 2.6px solid #2c2c51;
+                background-color: transparent;
+            }
+        }
+    }
+
+    .intro-content {
+        display: flex;
+        flex-wrap: wrap;
+        // align-items: center;
+        justify-content: center;
+        // max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        gap: 3rem;
+
+        .text-block,
+        .image-block {
+            flex: 1 1 45%;
+            min-width: 300px;
+            
+        }
+
+        .text-block {
+            h2 {
+                font-size: 2.8rem;
+                font-weight: 700;
+                line-height: 1.3;
+                margin-bottom: 2rem;
+                color: #2c2c51;
+                
+            }
+
+            p {
+                font-size: 1.6rem;
+                line-height: 1.6;
+                margin-bottom: 2rem;
+                color: #333;
+                 font-weight: 300; 
+            }
+
+            strong{
+                font-weight: 700;
+            }
+
+        
+            .progress-circle-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+
+                .circle-progress {
+                    width: 170px;
+                    height: 170px;
+
+                    .bg {
+                        fill: none;
+                        stroke: #eee;
+                        stroke-width: 7;
+                    }
+
+                    .progress {
+                        fill: none;
+                        stroke: #357bc3;
+                        stroke-width: 6;
+                        stroke-linecap: round;
+                        stroke-dasharray: 282.6;
+                        stroke-dashoffset: 34.65;
+                        transform: rotate(-90deg);
+                        transform-origin: 50% 50%;
+                    }
+
+                    text {
+                        dominant-baseline: middle;
+                    }
+
+                    .value {
+                        fill: #357bc3;
+                        font-size: 33px;
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif;
+                    }
+
+                    .label {
+                        fill: #357bc3;
+                        font-size: 12px;
+                        font-weight: 500;
+                        font-family: 'Poppins', sans-serif;
+                    }
+                }
+
+                .progress-text {
+                    font-size: 1.4rem;
+                    color: #357bc3;
+                    font-weight: 600;
+
+                    strong {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .image-block {
+            flex: 1 1 45%;
+            min-width: 300px;
+
+            .image-stack {
+                position: relative;
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .overlay-img {
+                position: absolute;
+                top: 40px;
+                right: -30px;
+                width: 90%;
+                height: auto;
+                border-radius: 0.7rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                z-index: 0;
+            }
+
+            .main-img {
+                position: relative;
+                top: 100px;
+                right: 120px;
+                z-index: 1;
+                width: 78%;
+                margin: 0 auto;
+                display: block;
+                border-radius: 1rem;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            }
+
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        .intro-content {
+            flex-direction: column;
+            text-align: center;
+
+            .text-block,
+            .image-block {
+                width: 100%;
+            }
+
+            .progress-circle-wrapper {
+                justify-content: center;
+            }
+        }
+    }
+}
