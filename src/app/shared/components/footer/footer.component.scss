@@ -68,4 +68,50 @@
       }
     }
   }
+
+    // Mobile & tablet
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+
+    .quote-left {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+      gap: 0.5rem;
+    }
+
+    .quote-symbol {
+      font-size: 5rem;
+    }
+
+    .quote-line {
+      height: 3rem;
+      width: 0.25rem;
+    }
+
+    .quote-text {
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .quote-symbol {
+      font-size: 3.5rem;
+    }
+
+    .quote-text {
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .quote-line {
+      height: 2rem;
+    }
+  }
 }
