@@ -3,7 +3,7 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
-  selector: 'app-feature',
+  selector: 'ca-feature',
   imports: [CardModule, ButtonModule],
   templateUrl: './feature.component.html',
   styleUrl: './feature.component.scss'
