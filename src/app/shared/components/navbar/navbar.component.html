@@ -1,19 +1,38 @@
-<!-- <header class="custom-navbar">
+<header class="custom-navbar">
   <div class="navbar-container">
     <div class="logo-section" routerLink="/">
       <img src="/logo.png" alt="Logo" class="logo-img" />
     </div>
-    <nav class="nav-links">
+
+    <button class="hamburger" (click)="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- DESKTOP MENU -->
+    <nav class="nav-links desktop-only">
       <a routerLink="/" routerLinkActive="active">Home</a>
       <a routerLink="/about" routerLinkActive="active">About</a>
       <a routerLink="/features" routerLinkActive="active">Features</a>
       <a routerLink="/workflow" routerLinkActive="active">Workflow</a>
       <a routerLink="/plans" routerLinkActive="active">Piani</a>
     </nav>
-
-    <div class="nav-buttons">
+    <div class="nav-buttons desktop-only">
       <button pButton label="Registrati" class="rounded-btn" routerLink="/register"></button>
       <button pButton label="Log in" class="rounded-btn" routerLink="/login"></button>
     </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu mobile-only" [ngClass]="{ open: isMenuOpen }">
+      
+      <a routerLink="/" routerLinkActive="active">Home</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/features" routerLinkActive="active">Features</a>
+      <a routerLink="/workflow" routerLinkActive="active">Workflow</a>
+      <a routerLink="/plans" routerLinkActive="active">Piani</a>
+      <div class="nav-buttons mobile">
+        <button pButton label="Log in" class="rounded-btn" routerLink="/login"></button>
+        <button pButton label="Registrati" class="rounded-btn" routerLink="/register"></button>
+      </div>
+    </div>
   </div>
-</header> -->
+</header>
