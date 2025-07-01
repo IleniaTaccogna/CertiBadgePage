@@ -1,7 +1,5 @@
 @use '../../../_variables' as *;
 
-
-// Container principale della navbar
 .custom-navbar {
   position: absolute;
   top: 0;
@@ -11,7 +9,6 @@
   background: transparent;
   padding: 1rem 0;
 
-  // Contenitore interno per logo, menu e bottoni
   .navbar-container {
     margin: 0 auto;
     display: flex;
@@ -21,8 +18,6 @@
     overflow-x: hidden;
   }
 
-
-  // Sezione logo
   .logo-section {
     position: relative;
     z-index: 1021;
@@ -30,7 +25,6 @@
     align-items: center;
     cursor: pointer;
 
-    // Immagine logo responsiva
     .logo-img {
       height: 7rem;
       width: auto;
@@ -38,7 +32,6 @@
     }
   }
 
-  // Bottone hamburger nascosto su desktop
   .hamburger {
     display: none;
     background: none;
@@ -55,8 +48,6 @@
     }
   }
 
-
-  // Menu link e bottoni allineati orizzontalmente su desktop
   .nav-links,
   .nav-buttons {
     display: flex;
@@ -64,7 +55,6 @@
     gap: 2rem;
   }
 
-  // Stile link del menu
   .nav-links a {
     color: white;
     text-decoration: none;
@@ -72,7 +62,6 @@
     font-size: 1.7rem;
   }
 
-  // Stile comune per tutti i bottoni
   .rounded-btn {
     background: #2c2c51;
     color: white;
@@ -86,27 +75,22 @@
     }
   }
 
-  // Bottoni desktop
   .nav-buttons .rounded-btn {
     padding: 0.7rem;
     font-size: 1.1rem;
     width: 9rem;
   }
 
-  // MOBILE STYLES
-  // Mostra hamburger su mobile
-  @media (max-width: 768px) {
+  // MOBILE & TABLET SMALLER DEVICES
+  @media (max-width: 1350px) {
     .hamburger {
       display: block;
     }
 
-    // Nasconde menu desktop su mobile
     .desktop-only {
       display: none !important;
     }
 
-
-    // Menu mobile a schermo intero nascosto di default
     .mobile-menu {
       display: none;
       position: fixed;
@@ -125,15 +109,11 @@
       transition: transform 0.3s ease-in-out;
       z-index: 1010;
 
-
-      // Quando il menu è aperto
       &.open {
         display: flex;
         transform: translateY(0);
       }
 
-
-      // Stile link menu mobile
       a {
         color: #2c2c51;
         font-size: 1.8rem;
@@ -141,7 +121,6 @@
         text-decoration: none;
       }
 
-      // Bottoni mobile disposti verticalmente
       .nav-buttons.mobile {
         display: flex;
         flex-direction: column;
@@ -166,8 +145,8 @@
     }
   }
 
-  // DESKTOP
-  @media (min-width: 769px) {
+  // DESKTOP LARGE DEVICES
+  @media (min-width: 1025px) {
     .mobile-only {
       display: none !important;
     }
