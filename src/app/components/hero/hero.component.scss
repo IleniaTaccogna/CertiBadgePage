@@ -4,17 +4,16 @@
     align-items: center;
     padding: 4rem 6rem;
     gap: 4rem;
-    height: 100vh;
+    min-height: 90vh;
     background: linear-gradient(to bottom, #99D9F4 40%, #ffffff 85%);
     color: white;
+    flex-wrap: wrap;
 
     @media (max-width: 1024px) {
         flex-direction: column;
         text-align: center;
         padding: 2rem;
     }
-
-
 
     .hero-content {
         flex: 1;
@@ -36,8 +35,15 @@
             strong {
                 font-weight: 800;
             }
+
+            @media (max-width: 768px) {
+                font-size: 2.5rem;
+            }
         }
 
+        .rounded-btn {
+            margin-top: 2rem;
+        }
     }
 
     .hero-image {
@@ -45,37 +51,43 @@
         text-align: center;
         display: flex;
         align-items: flex-end;
+        justify-content: center;
 
         img {
             max-width: 120%;
             width: 600px;
             height: auto;
-            transform: translateY(252px);
+            transform: translateY(201px);
             transition: transform 0.3s ease;
 
             @media (max-width: 1024px) {
                 width: 90%;
-                transform: translateY(20px);
+                transform: translateY(40px);
+            }
+
+            @media (max-width: 480px) {
+                max-width: 100%;
+                transform: translateY(37px);
             }
         }
     }
-}
 
 
-.rounded-btn {
-    display: flex;
-    gap: 1rem;
-    display: inline-block;
-    background: #2c2c51;
-    border-radius: 2rem;
-    color: white;
-    font-weight: bold;
-    padding: 1.2rem 4rem;
-    font-size: 1.4rem;
-    text-decoration: none;
-    white-space: nowrap;
+    .rounded-btn {
+        display: flex;
+        gap: 1rem;
+        display: inline-block;
+        background: #2c2c51;
+        border-radius: 2rem;
+        color: white;
+        font-weight: bold;
+        padding: 1.2rem 4rem;
+        font-size: 1.4rem;
+        text-decoration: none;
+        white-space: nowrap;
 
-    &:hover {
-        background: #1e1e3c;
+        &:hover {
+            background: #1e1e3c;
+        }
     }
 }
