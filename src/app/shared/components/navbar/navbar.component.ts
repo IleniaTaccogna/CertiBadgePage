@@ -11,8 +11,6 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
-
   isMenuOpen = false;
 
   toggleMenu() {
