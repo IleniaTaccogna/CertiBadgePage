@@ -13,7 +13,7 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 1.5rem;
     overflow-x: hidden;
   }
@@ -95,12 +95,12 @@
 
     .mobile-menu {
       display: none;
-      position: fixed; // copre tutta la viewport
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100vh; // altezza viewport
-      padding-top: 7rem; // spazio per navbar alta 7rem
+      height: 100vh;
+      padding-top: 7rem;
       background-color: white;
       flex-direction: column;
       align-items: center;
@@ -109,7 +109,7 @@
       overflow-y: auto;
       transform: translateY(-100%);
       transition: transform 0.3s ease-in-out;
-      z-index: 1010; // sotto navbar, sopra il resto
+      z-index: 1010;
 
       &.open {
         display: flex;
