@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&display=swap');
 
 :host {
-font-family: 'Urbanist', sans-serif;
+    font-family: 'Urbanist', sans-serif;
 }
+
 .about-intro {
     padding: 6rem 3rem;
     background-color: #ffffff;
@@ -51,7 +52,7 @@ font-family: 'Urbanist', sans-serif;
         .image-block {
             flex: 1 1 45%;
             min-width: 300px;
-            
+
         }
 
         .text-block {
@@ -61,7 +62,7 @@ font-family: 'Urbanist', sans-serif;
                 line-height: 1.3;
                 margin-bottom: 2rem;
                 color: #2c2c51;
-                
+
             }
 
             p {
@@ -69,14 +70,14 @@ font-family: 'Urbanist', sans-serif;
                 line-height: 1.6;
                 margin-bottom: 2rem;
                 color: #333;
-                 font-weight: 300; 
+                font-weight: 300;
             }
 
-            strong{
+            strong {
                 font-weight: 700;
             }
 
-        
+
             .progress-circle-wrapper {
                 display: flex;
                 align-items: center;
@@ -176,6 +177,7 @@ font-family: 'Urbanist', sans-serif;
         .intro-content {
             flex-direction: column;
             text-align: center;
+            padding: 0 1rem;
 
             .text-block,
             .image-block {
@@ -185,6 +187,60 @@ font-family: 'Urbanist', sans-serif;
             .progress-circle-wrapper {
                 justify-content: center;
             }
+
+            .image-block {
+                .image-stack {
+                    max-width: 320px;
+                    margin: 0 auto;
+                    position: relative;
+                    height: auto;
+                }
+
+                .main-img {
+                    position: relative;
+                    width: 100%;
+                    top: 50px;
+                    right: 30px;
+                    z-index: 2;
+                }
+
+                .overlay-img {
+                    position: absolute;
+                    width: 90%;
+                    top: 0;
+                    right: 0;
+                    z-index: 1;
+                }
+            }
         }
     }
+
+    @media (max-width: 1024px) and (min-width: 769px) {
+        .intro-content {
+            .image-block {
+                .image-stack {
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+
+                .main-img {
+                    position: relative;
+                    top: 60px;
+                    right: 20px;
+                    width: 90%;
+                    z-index: 2;
+                }
+
+                .overlay-img {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 95%;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+
 }
