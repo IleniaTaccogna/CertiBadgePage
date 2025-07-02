@@ -13,7 +13,7 @@
  
   .title-features {
     font-size: 4rem;
-    color: #2b2b4f;
+    color: $primary-color;
     margin-top: 10rem;
   }
  
@@ -81,6 +81,7 @@
  
     p {
       margin: 1.1rem;
+      color: $primary-color;
     }
  
     .column {
@@ -163,12 +164,12 @@
 .highlight {
   h4 {
     font-size: 2.5rem;
-    color: #2b2b4f;
+    color: $primary-color;
     margin-bottom: 1rem;
   }
  
   >p {
-    color: #444;
+    color: $primary-color;
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
     margin-top: 2.5rem;
@@ -179,7 +180,7 @@
  
 // Register button
 .btn-register {
-  background-color: #2b2b4f;
+  background-color: $primary-color;
   color: white;
   border: none;
   padding: 0.7rem 1.5rem;
