@@ -23,49 +23,23 @@
     </div>
 </div>
 
+
 <!-- SECONDA RIGA DELLA PAGE -->
 <div class="testimonial-section">
+    @for (testimonial of testimonials; track $index) {
     <div class="testimonial">
         <div class="testimonial-bubble">
-            <p>Con CertiBadge abbiamo semplificato radicalmente l’assegnazione delle certificazioni. Il sistema è
-                intuitivo e ci permette di monitorare tutto in tempo reale.</p>
+            <p>{{ testimonial.message }}</p>
         </div>
         <div class="testimonial-user">
-            <img src="https://i.pravatar.cc/80?img=1" alt="Giulia" />
+            <img [src]="testimonial.image" [alt]="testimonial.name" />
             <div class="testimonial-user-info">
-                <strong>Giulia Ferrante</strong>
-                <span>Responsabile Amministrativa</span>
+                <strong>{{ testimonial.name }}</strong>
+                <span>{{ testimonial.role }}</span>
             </div>
         </div>
     </div>
-
-    <div class="testimonial">
-        <div class="testimonial-bubble">
-            <p>Uso CertiBadge per certificare le competenze acquisite nei miei corsi online. È facile da usare,
-                personalizzabile e molto apprezzato dai miei studenti.</p>
-        </div>
-        <div class="testimonial-user">
-            <img src="https://i.pravatar.cc/80?img=2" alt="Luca" />
-            <div class="testimonial-user-info">
-                <strong>Luca Marinelli</strong>
-                <span>Docente freelance</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="testimonial">
-        <div class="testimonial-bubble">
-            <p>Con CertiBadge abbiamo digitalizzato l’intero processo certificativo in tempi record. Tutto è più veloce,
-                tracciabile e professionale.</p>
-        </div>
-        <div class="testimonial-user">
-            <img src="https://i.pravatar.cc/80?img=3" alt="Francesca" />
-            <div class="testimonial-user-info">
-                <strong>Francesca De Biasi</strong>
-                <span>Coordinatrice Risorse Umane</span>
-            </div>
-        </div>
-    </div>
+    }
 </div>
 
 <!-- TERZA RIGA DELLA PAGE -->
