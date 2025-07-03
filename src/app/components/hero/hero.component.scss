@@ -1,0 +1,148 @@
+// Layout principale hero: distribuzione in 2 colonne, background sfumato
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  padding: 8rem 6rem 4rem; // 👈 spazio sopra aumentato per evitare sovrapposizione nav
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #99D9F4 40%, #ffffff 85%);
+  color: white;
+  flex-wrap: wrap;
+
+  // Colonna sinistra (testo)
+  .hero-content {
+    flex: 1;
+    z-index: 1;
+
+    .hero-subtitle {
+      font-size: 1.6rem;
+      font-weight: 500;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: white;
+
+      strong {
+        font-weight: 800;
+      }
+    }
+
+    .rounded-btn {
+      margin-top: 2rem;
+    }
+  }
+
+  // Colonna destra (immagine)
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    img {
+      width: 600px;
+      max-width: 120%;
+      height: auto;
+      transform: translateY(252px);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .rounded-btn {
+    display: inline-block;
+    background: #2c2c51;
+    border-radius: 2rem;
+    color: white;
+    font-weight: bold;
+    padding: 1.2rem 4rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover {
+      background: #1e1e3c;
+    }
+  }
+
+  // Tablet (fino a 1024px): stack verticale e immagine più piccola
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 7rem 2rem 3rem;
+
+    .hero-content {
+      margin-top: 3rem;
+
+      .hero-title {
+        font-size: 3rem;
+      }
+    }
+
+    .hero-image {
+      img {
+        width: 90%;
+        transform: translateY(40px);
+      }
+    }
+  }
+
+  // Smartphone (max 768px)
+  @media (max-width: 768px) {
+    padding: 6rem 1.5rem 2rem;
+
+    .hero-content {
+      .hero-title {
+        font-size: 2.4rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.3rem;
+      }
+
+      .rounded-btn {
+        font-size: 1.2rem;
+        padding: 1rem 3rem;
+      }
+    }
+
+    .hero-image {
+      img {
+        transform: translateY(30px);
+      }
+    }
+  }
+
+  // Smartphone piccoli (es. iPhone SE o Galaxy Fold)
+  @media (max-width: 400px) {
+    padding: 5rem 1rem 2rem;
+
+    .hero-content {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+    }
+
+    .hero-image {
+      img {
+        width: 100%;
+        transform: translateY(15px);
+      }
+    }
+
+    .rounded-btn {
+      font-size: 1rem;
+      padding: 0.8rem 2.5rem;
+    }
+  }
+}
