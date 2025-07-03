@@ -41,9 +41,7 @@
     .intro-content {
         display: flex;
         flex-wrap: wrap;
-        // align-items: center;
         justify-content: center;
-        // max-width: 1200px;
         margin: 0 auto;
         padding: 0 2rem;
         gap: 3rem;
@@ -52,7 +50,6 @@
         .image-block {
             flex: 1 1 45%;
             min-width: 300px;
-
         }
 
         .text-block {
@@ -62,7 +59,6 @@
                 line-height: 1.3;
                 margin-bottom: 2rem;
                 color: #2c2c51;
-
             }
 
             p {
@@ -76,7 +72,6 @@
             strong {
                 font-weight: 700;
             }
-
 
             .progress-circle-wrapper {
                 display: flex;
@@ -136,9 +131,6 @@
         }
 
         .image-block {
-            flex: 1 1 45%;
-            min-width: 300px;
-
             .image-stack {
                 position: relative;
                 width: 100%;
@@ -168,16 +160,49 @@
                 border-radius: 1rem;
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
             }
-
         }
-
     }
 
-    @media (max-width: 768px) {
+    // Ridimensionamento generale per tablet e piccoli laptop
+    @media (max-width: 1300px) {
+        .intro-content {
+            gap: 2rem;
+
+            .text-block {
+                h2 {
+                    font-size: 2.3rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .image-block {
+                .image-stack {
+                    max-width: 400px;
+                }
+
+                .main-img {
+                    top: 70px;
+                    right: 50px;
+                    width: 85%;
+                }
+
+                .overlay-img {
+                    top: 20px;
+                    right: -10px;
+                    width: 95%;
+                }
+            }
+        }
+    }
+
+    // Layout impilato per tablet più stretti
+    @media (max-width: 1024px) {
         .intro-content {
             flex-direction: column;
-            text-align: center;
-            padding: 0 1rem;
+            padding: 0;
 
             .text-block,
             .image-block {
@@ -191,56 +216,53 @@
             .image-block {
                 .image-stack {
                     max-width: 320px;
-                    margin: 0 auto;
-                    position: relative;
-                    height: auto;
                 }
 
                 .main-img {
-                    position: relative;
-                    width: 100%;
                     top: 50px;
                     right: 30px;
+                    width: 100%;
                     z-index: 2;
                 }
 
                 .overlay-img {
-                    position: absolute;
-                    width: 90%;
                     top: 0;
                     right: 0;
+                    width: 90%;
                     z-index: 1;
                 }
             }
         }
     }
 
-    @media (max-width: 1024px) and (min-width: 769px) {
+    // Layout mobile: benefici uno sotto l'altro e spaziatura più stretta
+    @media (max-width: 768px) {
+        .benefits-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.2rem;
+            padding: 0 1rem;
+
+            .benefit::before {
+                top: 0.6rem;
+                transform: none;
+            }
+        }
+    }
+
+    // Schermi mobile molto stretti: limita la larghezza del blocco immagine
+    @media (max-width: 400px) {
         .intro-content {
-            .image-block {
-                .image-stack {
-                    max-width: 400px;
-                    margin: 0 auto;
-                }
-
-                .main-img {
-                    position: relative;
-                    top: 60px;
-                    right: 20px;
-                    width: 90%;
-                    z-index: 2;
-                }
-
-                .overlay-img {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    width: 95%;
-                    z-index: 1;
-                }
+            .image-block .image-stack {
+                max-width: 200px;
             }
         }
     }
 
-
+    // Evita il wrapping (a capo) in viewports medi (es. mini PC)
+    @media (min-width: 800px) and (max-width: 1300px) {
+        .benefits-row {
+            flex-wrap: nowrap;
+        }
+    }
 }
