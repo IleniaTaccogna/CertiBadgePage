@@ -1,5 +1,6 @@
 @use '../../variables' as *;
 
+//Main Feature Section Container
 .feature-container {
   display: flex;
   flex-direction: column;
@@ -11,12 +12,14 @@
   background: linear-gradient(to bottom, #d8ecf8 0%, #d4eaf7 2%, #ffffff 80%);
   padding: 4rem 6rem;
 
+  // Main title styling
   .title-features {
     font-size: 4rem;
     color: $primary-color;
     margin-top: 10rem;
   }
 
+  // Layout containing left, center, and right panels
   .badge-layout {
     display: flex;
     justify-content: center;
@@ -46,6 +49,7 @@
     margin-bottom: 2rem;
     color: $text-secondary;
 
+    // Active state styling
     &.active {
       background-color: white;
       box-shadow: 0 0 10px rgba(7, 1, 1, 0.05);
@@ -57,6 +61,7 @@
   }
 }
 
+// Dot icon used in the option list
 .dot {
   width: 20px;
   height: 20px;
@@ -73,6 +78,7 @@
   height: 100%;
   width: 480px;
 
+    // Content inside the card
   .card-body {
     display: flex;
     justify-content: center;
@@ -89,18 +95,22 @@
     }
   }
 
+  // Icons section inside the card
   .card-icons {
     display: flex;
     padding: 1rem 2rem;
     gap: 2rem;
   }
 
+  
+  // Header layout with title and controls
   .card-header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+    // Card header background styling
   .card-header {
     background: radial-gradient(ellipse at center,
         #d8ecf8 20%,
@@ -108,6 +118,7 @@
         #ecf1f4 77%);
   }
 
+    // Utility class for responsive images
   .w-full {
     display: block;
     margin-left: auto;
@@ -116,6 +127,7 @@
     height: auto;
   }
 
+    // Card title styling
   .title-card {
     color: $text-secondary;
     font-size: 2rem;
