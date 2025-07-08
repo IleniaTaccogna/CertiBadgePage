@@ -7,6 +7,7 @@
     padding: 9rem 1rem 1rem;
     flex-wrap: wrap;
 
+    // Lato sinistro (Avatar e Nome)
     .trust-left {
         display: flex;
         align-items: center;
@@ -27,6 +28,7 @@
         }
     }
 
+    // Lato destro (Numeri e Icone)
     .trust-right {
         display: flex;
         align-items: center;
@@ -65,6 +67,7 @@
     }
 }
 
+// Media query (PRIMA SEZIONE)
 @media (max-width: 1200px) {
     .trust-section {
         gap: 8rem;
@@ -172,7 +175,7 @@
 
 
 
-// SECONDA RIGA DELLA PAGE
+// SECONDA SEZIONE (Testimonial)
 .testimonial-section {
     display: flex;
     justify-content: space-between;
@@ -188,6 +191,7 @@
         text-align: left;
         position: relative;
 
+        // Box del testimonial
         .testimonial-bubble {
             background-color: white;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
@@ -216,6 +220,7 @@
             }
         }
 
+        // Informazioni utente testimonial
         .testimonial-user {
             display: flex;
             align-items: center;
@@ -245,7 +250,7 @@
     }
 }
 
-
+// Media query (SECONDA SEZIONE)
 @media (max-width: 768px) {
 
     .trust-section {
@@ -282,7 +287,7 @@
     }
 }
 
-// TERZA RIGA DELLA PAGE
+// TERZA SEZIONE (Pricing)
 .pricing-section {
     display: flex;
     justify-content: space-between;
@@ -293,6 +298,7 @@
     max-width: 1200px;
     margin: 0 auto;
 
+    // Lato sinistro (Descrizione e punti)
     .pricing-left {
         flex: 1;
         min-width: 280px;
@@ -328,6 +334,7 @@
         }
     }
 
+    // Lato destro (Opzioni e card prezzo)
     .pricing-right {
         flex: 1;
         min-width: 280px;
@@ -372,6 +379,7 @@
             padding: 1.5rem;
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 
+            // Header card prezzo
             .pricing-header {
                 display: flex;
                 justify-content: space-between;
@@ -411,6 +419,7 @@
                 margin: 1rem 0 2rem;
             }
 
+            // Footer card prezzo
             .pricing-footer {
                 display: flex;
                 justify-content: space-between;
@@ -458,7 +467,7 @@
     }
 }
 
-// Optional responsive tweaks
+// Media query (TERZA SEZIONE)
 @media (max-width: 768px) {
     .pricing-section {
         flex-direction: column;

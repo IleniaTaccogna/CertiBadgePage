@@ -4,10 +4,12 @@
     font-family: 'Urbanist', sans-serif;
 }
 
+// Sezione introduttiva
 .about-intro {
     padding: 11rem 3rem;
     background-color: #ffffff;
 
+    // Riga benefici
     .benefits-row {
         display: flex;
         flex-wrap: wrap;
@@ -38,6 +40,7 @@
         }
     }
 
+    // Contenuto principale
     .intro-content {
         display: flex;
         flex-wrap: wrap;
@@ -52,6 +55,7 @@
             min-width: 300px;
         }
 
+        // Blocco testo
         .text-block {
             h2 {
                 font-size: 2.8rem;
@@ -73,6 +77,7 @@
                 font-weight: 700;
             }
 
+            // Cerchio progresso
             .progress-circle-wrapper {
                 display: flex;
                 align-items: center;
@@ -130,6 +135,7 @@
             }
         }
 
+        // Blocco immagine
         .image-block {
             .image-stack {
                 position: relative;
@@ -163,7 +169,7 @@
         }
     }
 
-    // Ridimensionamento generale per tablet e piccoli laptop
+    // Responsività tablet e laptop
     @media (max-width: 1300px) {
         .intro-content {
             gap: 2rem;
@@ -198,7 +204,7 @@
         }
     }
 
-    // Layout impilato per tablet più stretti
+    // Responsività tablet stretto
     @media (max-width: 1024px) {
         .intro-content {
             flex-direction: column;
@@ -235,7 +241,7 @@
         }
     }
 
-    // Layout mobile: benefici uno sotto l'altro e spaziatura più stretta
+    // Responsività mobile
     @media (max-width: 768px) {
         .benefits-row {
             flex-direction: column;
@@ -250,7 +256,7 @@
         }
     }
 
-    // Schermi mobile molto stretti: limita la larghezza del blocco immagine
+    // Responsività mobile molto stretto
     @media (max-width: 400px) {
         .intro-content {
             .image-block .image-stack {
@@ -259,7 +265,7 @@
         }
     }
 
-    // Evita il wrapping (a capo) in viewports medi (es. mini PC)
+    // Responsività mini PC
     @media (min-width: 800px) and (max-width: 1300px) {
         .benefits-row {
             flex-wrap: nowrap;
