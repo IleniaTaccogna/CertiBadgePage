@@ -1,0 +1,31 @@
+{
+    "feature-options": [
+        {
+            "label": "Certificazioni tracciabili",
+            "isActive": false
+        },
+        {
+            "label": "Personalizzazione avanzata",
+            "isActive": true
+        },
+        {
+            "label": "Statistiche in tempo reale",
+            "isActive": false
+        },
+        {
+            "label": "Importazione facilitata",
+            "isActive": false
+        }
+    ],
+    "badge-detail": [
+        {
+            "name": "Digital Marketing Specialist",
+            "createdAt": "05-03-2025",
+            "updatedAt": "02-05-2025",
+            "version": 2,
+            "type": "Competenza",
+            "state": "Attivo",
+            "assignedCount": 1
+        }
+    ]
+}
