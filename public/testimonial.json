@@ -1,0 +1,22 @@
+{
+  "testimonials": [
+    {
+      "name": "Giulia Ferrante",
+      "role": "Responsabile Amministrativa",
+      "image": "https://i.pravatar.cc/80?img=0",
+      "message": "Con CertiBadge abbiamo semplificato radicalmente l’assegnazione delle certificazioni. Il sistema è intuitivo e ci permette di monitorare tutto in tempo reale."
+    },
+    {
+      "name": "Luca Marinelli",
+      "role": "Docente freelance",
+      "image": "https://i.pravatar.cc/84?img=8",
+      "message": "Uso CertiBadge per certificare le competenze acquisite nei miei corsi online. È facile da usare, personalizzabile e molto apprezzato dai miei studenti."
+    },
+    {
+      "name": "Francesca De Biasi",
+      "role": "Coordinatrice Risorse Umane",
+      "image": "https://i.pravatar.cc/88?img=5",
+      "message": "Con CertiBadge abbiamo digitalizzato l’intero processo certificativo in tempi record. Tutto è più veloce, tracciabile e professionale."
+    }
+  ]
+}
